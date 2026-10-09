@@ -1,2 +1,2 @@
 # welcrest
-Tienda online de productos electrónicos - Audífonos y Powerbands
+Tienda online de productos tegnologicos
