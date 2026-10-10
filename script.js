@@ -39,16 +39,6 @@ const products = [
     badge: "ACCESORIO",
     image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?auto=format&fit=crop&w=800&q=80"
   },
-  {
-    id: 6,
-    name: "PowerBand Pro",
-    category: "fitness",
-    price: 39.99,
-    badge: "PREMIUM",
-    image: "https://images.unsplash.com/photo-1434494876617-48da4c174b79?auto=format&fit=crop&w=800&q=80"
-  }
-];
-
 const cart = [];
 let currentFilter = "all";
 
