@@ -5,7 +5,7 @@ const products = [
     category: "audio",
     price: 25.99,
     badge: "BESTSELLER",
-    image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const products = [
     category: "audio",
     price: 29.99,
     badge: "NUEVO",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const products = [
     category: "fitness",
     price: 29.99,
     badge: "OFERTA",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 4,
@@ -29,15 +29,15 @@ const products = [
     category: "audio",
     price: 12.99,
     badge: "POPULAR",
-    image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 5,
     name: "Funda de silicona",
     category: "audio",
-    price: 8.99,
+    price: 1.99,
     badge: "ACCESORIO",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const products = [
     category: "fitness",
     price: 39.99,
     badge: "PREMIUM",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1434494876617-48da4c174b79?auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -215,3 +215,4 @@ checkoutButton.addEventListener("click", () => {
 
 renderProducts();
 renderCart();
+Actualizar productos e imágenes
