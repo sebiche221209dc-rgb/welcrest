@@ -38,7 +38,9 @@ const products = [
     price: 1.99,
     badge: "ACCESORIO",
     image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?auto=format&fit=crop&w=800&q=80"
-  },
+  }
+];
+
 const cart = [];
 let currentFilter = "all";
 
@@ -205,4 +207,3 @@ checkoutButton.addEventListener("click", () => {
 
 renderProducts();
 renderCart();
-actualizar productos
