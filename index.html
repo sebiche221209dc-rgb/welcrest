@@ -1,212 +1,228 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Welcrest - Tienda online de productos electrónicos para audio y rendimiento."
-    />
-    <title>Welcrest | Electrónica premium</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <div class="brand" aria-label="Welcrest home">
-          <span class="brand-mark">W</span>
-          <span>Welcrest</span>
-        </div>
-
-        <nav class="main-nav" aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#productos">Productos</a>
-          <a href="#categorias">Categorías</a>
-          <a href="#nosotros">Nosotros</a>
-        </nav>
-
-        <div class="nav-actions">
-          <button class="ghost-btn" type="button">Buscar</button>
-          <button class="cart-btn" type="button" aria-label="Ver carrito">
-            Carrito
-            <span id="cart-count" class="cart-count">0</span>
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcrest - Audio premium y fitness con productos modernos.">
+  <title>Welcrest | Premium Audio & Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand" aria-label="Welcrest">
+        <span class="brand-mark">W</span>
+        <span>WELCREST</span>
       </div>
-    </header>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
+        <a href="#sobre">Sobre nosotros</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cart-button" type="button" aria-label="Abrir carrito">
+          🛒 Carrito <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <main id="inicio">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Tecnología que acompaña tu ritmo</p>
-            <h1>Electrónica premium para tu día a día.</h1>
-            <p class="hero-text">
-              Descubre audífonos de alto rendimiento y powerbands para acompañar tu
-              activación física, trabajo y entretenimiento con estilo profesional.
-            </p>
-            <div class="hero-actions">
-              <a href="#productos" class="primary-btn">Comprar ahora</a>
-              <a href="#categorias" class="secondary-btn">Explorar categorías</a>
-            </div>
-
-            <ul class="metrics" aria-label="Estadísticas">
-              <li><strong>12k+</strong><span>Clientes satisfechos</span></li>
-              <li><strong>4.9/5</strong><span>Calificación promedio</span></li>
-              <li><strong>48h</strong><span>Envío express</span></li>
-            </ul>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AUDIO PREMIUM / FITNESS MODERNO</p>
+          <h1>Tecnología que mejora tu día a día.</h1>
+          <p class="hero-text">Descubre el mejor equilibrio entre estilo, rendimiento y comodidad con AirPods Pro, accesorios premium y PowerBand para una vida más activa.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="primary-btn">Explorar productos</a>
+            <a href="#sobre" class="secondary-btn">Conocer más</a>
           </div>
-
-          <div class="hero-visual" aria-label="Productos destacados">
-            <div class="product-card feature-card large">
-              <span class="tag">Más vendido</span>
-              <img
-                src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80"
-                alt="Audífonos premium"
-              />
-              <div class="feature-info">
-                <div>
-                  <p>Audífonos Pulse X</p>
-                  <h3>$249.00</h3>
-                </div>
-                <button class="mini-btn" type="button" data-product-id="1">Agregar</button>
-              </div>
-            </div>
-          </div>
+          <ul class="metrics" aria-label="Estadísticas">
+            <li><strong>5k+</strong><span>Clientes</span></li>
+            <li><strong>4.9★</strong><span>Calificación</span></li>
+            <li><strong>24h</strong><span>Envío</span></li>
+          </ul>
         </div>
-      </section>
-
-      <section id="categorias" class="categories section-space">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Categorías</p>
-            <h2>Todo lo que necesitas en un solo lugar</h2>
-          </div>
-
-          <div class="category-grid">
-            <article class="category-card category-audio">
+        <div class="hero-visual">
+          <div class="product-card feature-card">
+            <span class="tag">Más vendido</span>
+            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80" alt="AirPods Pro y audio premium">
+            <div class="feature-info">
               <div>
-                <span>Audio</span>
-                <h3>Audífonos</h3>
+                <p>AirPods Pro 2</p>
+                <h3>$25.99</h3>
               </div>
-              <button type="button">Ver colección</button>
-            </article>
-            <article class="category-card category-fitness">
-              <div>
-                <span>Fitness</span>
-                <h3>Powerbands</h3>
-              </div>
-              <button type="button">Ver colección</button>
-            </article>
-            <article class="category-card category-essentials">
-              <div>
-                <span>Accesorios</span>
-                <h3>Complementos</h3>
-              </div>
-              <button type="button">Ver colección</button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="productos" class="products section-space">
-        <div class="container">
-          <div class="section-heading split">
-            <div>
-              <p class="eyebrow">Productos destacados</p>
-              <h2>Diseñado para rendimiento y estilo</h2>
-            </div>
-            <div class="filter-row" aria-label="Filtros de productos">
-              <button class="filter active" type="button" data-filter="all">Todo</button>
-              <button class="filter" type="button" data-filter="audio">Audífonos</button>
-              <button class="filter" type="button" data-filter="fitness">Powerbands</button>
+              <button class="mini-btn" type="button" data-product-id="1">Agregar</button>
             </div>
           </div>
-
-          <div id="product-grid" class="product-grid" aria-live="polite"></div>
-        </div>
-      </section>
-
-      <section class="benefits section-space">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="eyebrow">¿Por qué Welcrest?</p>
-            <h2>Calidad, velocidad y confianza</h2>
-          </div>
-
-          <div class="benefits-grid">
-            <article class="benefit-item">
-              <div class="icon">⚡</div>
-              <h3>Entrega rápida</h3>
-              <p>Envíos en 48 horas para pedidos prioritarios.</p>
-            </article>
-            <article class="benefit-item">
-              <div class="icon">🛡️</div>
-              <h3>Garantía real</h3>
-              <p>Protección en cada producto y atención postventa.</p>
-            </article>
-            <article class="benefit-item">
-              <div class="icon">🎧</div>
-              <h3>Calidad premium</h3>
-              <p>Materiales elegidos para ofrecer experiencia y durabilidad.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="nosotros" class="cta section-space">
-        <div class="container cta-box">
-          <div>
-            <p class="eyebrow">Nosotros</p>
-            <h2>Más que una tienda: un estilo de vida activo.</h2>
-          </div>
-          <a href="#productos" class="primary-btn">Ver catálogo</a>
-        </div>
-      </section>
-    </main>
-
-    <aside id="cart-panel" class="cart-panel" aria-label="Carrito de compras">
-      <div class="cart-header">
-        <h3>Tu carrito</h3>
-        <button id="close-cart" class="close-cart" type="button" aria-label="Cerrar carrito">×</button>
-      </div>
-
-      <div id="cart-items" class="cart-items" aria-live="polite"></div>
-
-      <div class="cart-footer">
-        <div class="totals">
-          <span>Subtotal</span>
-          <strong id="cart-total">$0.00</strong>
-        </div>
-        <button type="button" class="checkout-btn">Proceder al pago</button>
-      </div>
-    </aside>
-
-    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
-
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <div>
-          <div class="brand footer-brand">
-            <span class="brand-mark">W</span>
-            <span>Welcrest</span>
-          </div>
-          <p>Electrónica premium para audio, movimiento y estilo.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#inicio">Inicio</a>
-          <a href="#productos">Productos</a>
-          <a href="#nosotros">Nosotros</a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section id="productos" class="section-space">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CATÁLOGO</p>
+          <h2>Productos premium</h2>
+        </div>
+        <div class="filter-row" aria-label="Filtros de productos">
+          <button class="filter active" type="button" data-filter="all">Todo</button>
+          <button class="filter" type="button" data-filter="audio">Audio</button>
+          <button class="filter" type="button" data-filter="fitness">Fitness</button>
+        </div>
+        <div id="products-grid" class="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">POR QUÉ WELCREST</p>
+          <h2>Calidad, estilo y confianza</h2>
+        </div>
+        <div class="category-grid">
+          <div class="category-card category-audio">
+            <span>AUDIO PREMIUM</span>
+            <h3>Audífonos Profesionales</h3>
+            <button class="mini-btn" type="button">Explorar</button>
+          </div>
+          <div class="category-card category-fitness">
+            <span>FITNESS</span>
+            <h3>PowerBand Avanzado</h3>
+            <button class="mini-btn" type="button">Explorar</button>
+          </div>
+          <div class="category-card category-essentials">
+            <span>ACCESORIOS</span>
+            <h3>Complementos Premium</h3>
+            <button class="mini-btn" type="button">Explorar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">BENEFICIOS</p>
+          <h2>Lo que nos diferencia</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-item">
+            <div class="icon">⚡</div>
+            <h3>Entrega rápida</h3>
+            <p>Recibe tus pedidos en 24 a 48 horas según tu ubicación.</p>
+          </article>
+          <article class="benefit-item">
+            <div class="icon">🛡️</div>
+            <h3>Garantía real</h3>
+            <p>Productos originales con soporte y respaldo fiable.</p>
+          </article>
+          <article class="benefit-item">
+            <div class="icon">✨</div>
+            <h3>Diseño premium</h3>
+            <p>Más que accesorios, una experiencia moderna y elegante.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section-space">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SOBRE NOSOTROS</p>
+          <h2>Más que una tienda: una experiencia inteligente.</h2>
+        </div>
+        <p>En Welcrest combinamos innovación, diseño y funcionalidad para ofrecer productos que acompañan la música, el entrenamiento y el día a día, siempre con un estilo premium y minimalista.</p>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">CLIENTES</p>
+          <h2>Lo que dicen</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"La calidad es excelente. El audio es increíble y la entrega fue muy rápida."</p>
+            <strong>— Ana G.</strong>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"El PowerBand me ayudó bastante en mi rutina. Muy buena experiencia de compra."</p>
+            <strong>— Luis R.</strong>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Se nota la calidad premium. También me gustó mucho el diseño y la atención."</p>
+            <strong>— Sofia M.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section-space">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">FAQ</p>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>¿Los productos son originales?</summary>
+            <p>Sí, todos nuestros productos son originales y verificados antes del envío.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tarda la entrega?</summary>
+            <p>Envíos rápidos de 24 a 48 horas dependiendo de tu ubicación.</p>
+          </details>
+          <details>
+            <summary>¿Puedo comprar por WhatsApp?</summary>
+            <p>Sí, al terminar tu pedido puedes comprar directamente por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿Incluyen regalo?</summary>
+            <p>Sí. En los productos destacados se incluye regalo promocional.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cart-panel" aria-label="Carrito de compras">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button type="button" class="close-cart" id="close-cart">×</button>
+    </div>
+    <div class="cart-items" id="cart-items" aria-live="polite"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Subtotal</span>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <button type="button" class="checkout-btn" id="checkout-btn">Comprar por WhatsApp</button>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <a href="https://wa.me/593978641572?text=Hola%20Welcrest%2C%20quiero%20hacer%20mi%20pedido." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Comprar por WhatsApp">WhatsApp</a>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="brand footer-brand">
+        <span class="brand-mark">W</span>
+        <span>WELCREST</span>
+      </div>
+      <p>Electrónica premium para audio y rendimiento.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

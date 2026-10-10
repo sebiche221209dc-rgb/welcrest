@@ -1,279 +1,828 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Welcrest - Tienda online de electrónica premium con audífonos y powerbands para rendimiento y estilo."
-    />
-    <title>Welcrest | Electrónica premium</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <div class="brand" aria-label="Welcrest inicio">
-          <span class="brand-mark">W</span>
-          <span>Welcrest</span>
-        </div>
+* {
+  box-sizing: border-box;
+}
 
-        <nav class="main-nav" aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#productos">Productos</a>
-          <a href="#categorias">Categorías</a>
-          <a href="#nosotros">Nosotros</a>
-          <a href="#faq">FAQ</a>
-        </nav>
+:root {
+  --bg: #f5f7fb;
+  --bg-soft: #eef2ff;
+  --card: #ffffff;
+  --card-strong: #111827;
+  --primary: #111827;
+  --primary-soft: #1f2937;
+  --accent: #2563eb;
+  --accent-2: #0ea5e9;
+  --text: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --success: #10b981;
+  --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  --radius: 22px;
+}
 
-        <div class="nav-actions">
-          <button class="ghost-btn" type="button">Buscar</button>
-          <button class="cart-btn" type="button" aria-label="Ver carrito">
-            Carrito
-            <span id="cart-count" class="cart-count">0</span>
-          </button>
-        </div>
-      </div>
-    </header>
+html {
+  scroll-behavior: smooth;
+}
 
-    <main id="inicio">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Tecnología que acompaña tu ritmo</p>
-            <h1>Electrónica premium para tu estilo de vida.</h1>
-            <p class="hero-text">
-              Audífonos de alto rendimiento y powerbands modernos para trabajar,
-              entrenar y disfrutar cada momento con más energía y mejor sonido.
-            </p>
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
 
-            <div class="hero-actions">
-              <a href="#productos" class="primary-btn">Comprar ahora</a>
-              <a href="#categorias" class="secondary-btn">Explorar categorías</a>
-            </div>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-            <ul class="metrics" aria-label="Estadísticas de confianza">
-              <li><strong>12k+</strong><span>Clientes</span></li>
-              <li><strong>4.9/5</strong><span>Valoración</span></li>
-              <li><strong>48h</strong><span>Envío</span></li>
-            </ul>
-          </div>
+button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
 
-          <div class="hero-visual" aria-label="Productos destacados">
-            <div class="product-card feature-card large">
-              <span class="tag">Más vendido</span>
-              <img
-                src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1000&q=80"
-                alt="Audífonos premium de Welcrest"
-              />
-              <div class="feature-info">
-                <div>
-                  <p>Audífonos Pulse X</p>
-                  <h3>$249.00</h3>
-                </div>
-                <button class="mini-btn" type="button" data-product-id="1">Agregar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+img {
+  max-width: 100%;
+  display: block;
+}
 
-      <section id="categorias" class="categories section-space">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Categorías</p>
-            <h2>Todo lo que necesitas en un solo lugar</h2>
-          </div>
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
 
-          <div class="category-grid">
-            <article class="category-card category-audio">
-              <div>
-                <span>Audio</span>
-                <h3>Audífonos</h3>
-              </div>
-              <button type="button">Ver colección</button>
-            </article>
-            <article class="category-card category-fitness">
-              <div>
-                <span>Fitness</span>
-                <h3>Powerbands</h3>
-              </div>
-              <button type="button">Ver colección</button>
-            </article>
-            <article class="category-card category-essentials">
-              <div>
-                <span>Accesorios</span>
-                <h3>Complementos</h3>
-              </div>
-              <button type="button">Ver colección</button>
-            </article>
-          </div>
-        </div>
-      </section>
+.section-space {
+  padding: 90px 0;
+}
 
-      <section id="productos" class="products section-space">
-        <div class="container">
-          <div class="section-heading split">
-            <div>
-              <p class="eyebrow">Productos destacados</p>
-              <h2>Diseñado para rendimiento y estilo</h2>
-            </div>
-            <div class="filter-row" aria-label="Filtros de productos">
-              <button class="filter active" type="button" data-filter="all">Todo</button>
-              <button class="filter" type="button" data-filter="audio">Audífonos</button>
-              <button class="filter" type="button" data-filter="fitness">Powerbands</button>
-            </div>
-          </div>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(14px);
+  background: rgba(245, 247, 251, 0.82);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
 
-          <div id="product-grid" class="product-grid" aria-live="polite"></div>
-        </div>
-      </section>
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 84px;
+}
 
-      <section class="benefits section-space">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="eyebrow">¿Por qué Welcrest?</p>
-            <h2>Calidad premium, experiencia confiable</h2>
-          </div>
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
 
-          <div class="benefits-grid">
-            <article class="benefit-item">
-              <div class="icon">⚡</div>
-              <h3>Entrega rápida</h3>
-              <p>Despachos ágiles para que recibas tus pedidos en poco tiempo.</p>
-            </article>
-            <article class="benefit-item">
-              <div class="icon">🛡️</div>
-              <h3>Garantía real</h3>
-              <p>Protección en cada compra y atención personalizada.</p>
-            </article>
-            <article class="benefit-item">
-              <div class="icon">🎧</div>
-              <h3>Calidad premium</h3>
-              <p>Productos selectos para ofrecer experiencia y durabilidad.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  box-shadow: var(--shadow);
+}
 
-      <section class="testimonials section-space">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="eyebrow">Opiniones</p>
-            <h2>Lo que dicen nuestros clientes</h2>
-          </div>
+.main-nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.96rem;
+  font-weight: 500;
+}
 
-          <div class="testimonial-grid">
-            <article class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>“El audio es increíble y el diseño se ve muy premium. Lo compré para entrenar y también lo uso en la oficina.”</p>
-              <strong>— Ana G.</strong>
-            </article>
-            <article class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>“Los powerbands son muy buenos para mi rutina diaria. Son resistentes y muy fáciles de usar.”</p>
-              <strong>— Luis R.</strong>
-            </article>
-            <article class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>“La experiencia de compra fue rápida y la atención muy amable. Definitivamente volvería a ordenar.”</p>
-              <strong>— Sofía M.</strong>
-            </article>
-          </div>
-        </div>
-      </section>
+.main-nav a:hover,
+.footer-links a:hover {
+  color: var(--primary);
+}
 
-      <section id="faq" class="faq section-space">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="eyebrow">FAQ</p>
-            <h2>Preguntas frecuentes</h2>
-          </div>
+.nav-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
 
-          <div class="faq-list">
-            <details open>
-              <summary>¿Hacen envíos nacionales?</summary>
-              <p>Sí, realizamos envíos a nivel nacional con tiempos estimados según tu ubicación.</p>
-            </details>
-            <details>
-              <summary>¿Los productos tienen garantía?</summary>
-              <p>Todos nuestros productos cuentan con garantía de calidad y soporte postventa.</p>
-            </details>
-            <details>
-              <summary>¿Puedo comprar por WhatsApp?</summary>
-              <p>Claro, puedes completar tu pedido directamente desde el botón de WhatsApp o desde tu carrito.</p>
-            </details>
-            <details>
-              <summary>¿Los audífonos se adaptan al uso diario?</summary>
-              <p>Sí, están diseñados para uso diario, trabajo, estudio, ejercicio y entretenimiento.</p>
-            </details>
-          </div>
-        </div>
-      </section>
+.cart-btn,
+.secondary-btn,
+.filter,
+.close-cart,
+.checkout-btn,
+.mini-btn,
+.category-card button,
+.primary-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
 
-      <section id="nosotros" class="cta section-space">
-        <div class="container cta-box">
-          <div>
-            <p class="eyebrow">Nosotros</p>
-            <h2>Más que una tienda: un estilo de vida activo y conectado.</h2>
-          </div>
-          <a href="#productos" class="primary-btn">Ver catálogo</a>
-        </div>
-      </section>
-    </main>
+.secondary-btn,
+.filter {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  font-weight: 600;
+}
 
-    <aside id="cart-panel" class="cart-panel" aria-label="Carrito de compras">
-      <div class="cart-header">
-        <h3>Tu carrito</h3>
-        <button id="close-cart" class="close-cart" type="button" aria-label="Cerrar carrito">×</button>
-      </div>
+.secondary-btn:hover,
+.filter:hover,
+.primary-btn:hover,
+.mini-btn:hover,
+.checkout-btn:hover,
+.category-card button:hover,
+.cart-btn:hover,
+.whatsapp-float:hover {
+  transform: translateY(-1px);
+}
 
-      <div id="cart-items" class="cart-items" aria-live="polite"></div>
+.cart-btn {
+  position: relative;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+}
 
-      <div class="cart-footer">
-        <div class="totals">
-          <span>Subtotal</span>
-          <strong id="cart-total">$0.00</strong>
-        </div>
-        <button type="button" class="checkout-btn" id="checkout-btn">Proceder al pago</button>
-      </div>
-    </aside>
+.cart-count {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary);
+  font-size: 0.75rem;
+  margin-left: 8px;
+}
 
-    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
+.hero {
+  padding: 56px 0 30px;
+}
 
-    <a
-      href="https://wa.me/521234567890?text=Hola%20Welcrest%2C%20quiero%20hacer%20mi%20pedido."
-      class="whatsapp-float"
-      aria-label="Comprar por WhatsApp"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span>WhatsApp</span>
-    </a>
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 38px;
+  align-items: center;
+}
 
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <div>
-          <div class="brand footer-brand">
-            <span class="brand-mark">W</span>
-            <span>Welcrest</span>
-          </div>
-          <p>Electrónica premium para audio, movimiento y estilo.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#inicio">Inicio</a>
-          <a href="#productos">Productos</a>
-          <a href="#nosotros">Nosotros</a>
-        </div>
-      </div>
-    </footer>
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
 
-    <script src="script.js"></script>
-  </body>
-</html>
+.hero-copy h1,
+.section-heading h2 {
+  margin: 0;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  max-width: 560px;
+}
+
+.hero-text {
+  margin-top: 20px;
+  max-width: 560px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.primary-btn,
+.checkout-btn,
+.mini-btn,
+.category-card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-soft));
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(17, 24, 39, 0.2);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.metrics {
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.metrics li {
+  min-width: 120px;
+}
+
+.metrics strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.metrics span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.feature-card {
+  width: min(100%, 520px);
+  position: relative;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.feature-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px 26px;
+}
+
+.feature-info p {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.feature-info h3 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -0.06em;
+}
+
+.mini-btn {
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+}
+
+.section-heading {
+  margin-bottom: 26px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.section-heading.centered {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.category-grid,
+.benefits-grid,
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+  border-radius: 26px;
+  padding: 22px 20px;
+  color: white;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.65));
+}
+
+.category-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.category-card span {
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.category-card h3 {
+  margin: 10px 0 0;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  letter-spacing: -0.05em;
+}
+
+.category-card button {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: none;
+}
+
+.category-audio {
+  background: url("https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80") center/cover no-repeat;
+}
+
+.category-fitness {
+  background: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80") center/cover no-repeat;
+}
+
+.category-essentials {
+  background: url("https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80") center/cover no-repeat;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-item {
+  background: var(--card);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.product-media {
+  position: relative;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+}
+
+.product-media img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 999px;
+  padding: 0.46rem 0.7rem;
+  font-size: 0.76rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.product-info {
+  padding: 18px 18px 20px;
+}
+
+.product-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-top h3 {
+  margin: 0;
+  font-size: 1.12rem;
+  letter-spacing: -0.04em;
+}
+
+.product-category {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 12px;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.product-item .mini-btn {
+  padding: 0.7rem 0.8rem;
+  min-width: 110px;
+}
+
+.benefit-item,
+.testimonial-card {
+  background: white;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 22px;
+  padding: 24px 22px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-soft);
+  border-radius: 16px;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+.benefit-item h3,
+.testimonial-card strong {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  letter-spacing: -0.05em;
+}
+
+.benefit-item p,
+.testimonial-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stars {
+  letter-spacing: 0.2em;
+  color: #fbbf24;
+  font-size: 1.05rem;
+}
+
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-list details {
+  background: white;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.03);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  background: white;
+  padding: 32px 0 60px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-brand {
+  margin-bottom: 12px;
+}
+
+.site-footer p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(430px, 100%);
+  height: 100vh;
+  background: white;
+  box-shadow: -20px 0 50px rgba(15, 23, 42, 0.2);
+  transform: translateX(110%);
+  transition: transform 0.25s ease;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-panel.open {
+  transform: translateX(0);
+}
+
+.cart-header,
+.cart-footer {
+  padding: 22px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+}
+
+.close-cart {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+
+.cart-items {
+  flex: 1;
+  padding: 18px 18px 0;
+  overflow: auto;
+}
+
+.cart-item {
+  display: flex;
+  gap: 14px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.cart-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.cart-item-content {
+  flex: 1;
+}
+
+.cart-item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cart-item-top h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.remove-item {
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.qty-control button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid var(--line);
+  font-weight: 700;
+}
+
+.qty-value {
+  min-width: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cart-empty {
+  padding: 30px 8px 12px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.cart-footer {
+  border-top: 1px solid var(--line);
+  border-bottom: none;
+}
+
+.totals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+  color: var(--muted);
+}
+
+.totals strong {
+  font-size: 1.5rem;
+  color: var(--primary);
+  letter-spacing: -0.05em;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 40;
+}
+
+.cart-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  box-shadow: 0 18px 36px rgba(37, 211, 102, 0.35);
+  font-weight: 800;
+  z-index: 45;
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .category-grid,
+  .benefits-grid,
+  .testimonial-grid,
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-wrap {
+    flex-wrap: wrap;
+    padding: 16px 0;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .category-grid,
+  .benefits-grid,
+  .testimonial-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .main-nav {
+    gap: 12px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .feature-card img {
+    height: 420px;
+  }
+}
