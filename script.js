@@ -215,4 +215,4 @@ checkoutButton.addEventListener("click", () => {
 
 renderProducts();
 renderCart();
-Actualizar productos e imágenes
+actualizar productos
