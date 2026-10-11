@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <div class="brand" aria-label="Welcrest">
-        <img src="logo.jfif" alt="Welcrest" style="height: 38px; width: auto;">
+        <img src="logo.jfif" alt="Welcrest" style="height: 40px; width: auto;">
       </div>
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="#productos">Productos</a>
@@ -33,7 +33,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">AUDIO PREMIUM / FITNESS MODERNO</p>
+          <p class="eyebrow">AUDIO PREMIUM / ACCESORIOS</p>
           <h1>Tecnología que mejora tu día a día.</h1>
           <p class="hero-text">Descubre el mejor equilibrio entre estilo, rendimiento y comodidad con AirPods Pro, accesorios premium y PowerBand para una vida más activa.</p>
           <div class="hero-actions">
@@ -47,8 +47,8 @@
           </ul>
         </div>
         <div class="hero-visual">
-          <div class="product-card feature-card" style="display: flex; align-items: center; justify-content: center; min-height: 380px; background: #0f172a;">
-            <img src="logo.jfif" alt="Welcrest" style="max-width: 220px; width: 100%; height: auto;">
+          <div class="product-card feature-card" style="display:flex;align-items:center;justify-content:center;min-height:420px;background:#0f172a;padding:40px;">
+            <img src="logo.jfif" alt="Welcrest" style="max-width:280px;width:100%;height:auto;">
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
         <div class="filter-row" aria-label="Filtros de productos">
           <button class="filter active" type="button" data-filter="all">Todo</button>
           <button class="filter" type="button" data-filter="audio">Audio</button>
-          <button class="filter" type="button" data-filter="fitness">Fitness</button>
+          <button class="filter" type="button" data-filter="fitness">Accesorios</button>
         </div>
         <div id="products-grid" class="product-grid" aria-live="polite"></div>
       </div>
@@ -75,21 +75,16 @@
           <p class="eyebrow">POR QUÉ WELCREST</p>
           <h2>Calidad, estilo y confianza</h2>
         </div>
-        <div class="category-grid">
+        <div class="category-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
           <div class="category-card category-audio">
-            <span>AUDIO PREMIUM</span>
+            <span>AUDIO</span>
             <h3>Audífonos Profesionales</h3>
-            <button class="mini-btn" type="button">Explorar</button>
-          </div>
-          <div class="category-card category-fitness">
-            <span>FITNESS</span>
-            <h3>PowerBand Avanzado</h3>
-            <button class="mini-btn" type="button">Explorar</button>
+            <button class="mini-btn" type="button" onclick="document.querySelector('[data-filter=audio]').click()">Explorar</button>
           </div>
           <div class="category-card category-essentials">
             <span>ACCESORIOS</span>
-            <h3>Complementos Premium</h3>
-            <button class="mini-btn" type="button">Explorar</button>
+            <h3>Cable, Estuche y PowerBand</h3>
+            <button class="mini-btn" type="button" onclick="document.querySelector('[data-filter=fitness]').click()">Explorar</button>
           </div>
         </div>
       </div>
