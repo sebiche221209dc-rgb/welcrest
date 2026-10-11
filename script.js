@@ -5,7 +5,7 @@ const products = [
     category: "audio",
     price: 25.99,
     badge: "BESTSELLER",
-    image: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=800&q=80"
+    image: "airpods-pro-2.png.png"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const products = [
     category: "audio",
     price: 29.99,
     badge: "NUEVO",
-    image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80"
+    image: "airpods-pro-3.png.png"
   },
   {
     id: 3,
@@ -21,23 +21,23 @@ const products = [
     category: "fitness",
     price: 29.99,
     badge: "OFERTA",
-    image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80"
+    image: "powerband.png.png"
   },
   {
     id: 4,
     name: "Cable USB-C Premium",
-    category: "audio",
+    category: "fitness",
     price: 12.99,
     badge: "POPULAR",
-    image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80"
+    image: "cable-usbc.png.png"
   },
   {
     id: 5,
     name: "Funda de silicona",
-    category: "audio",
+    category: "fitness",
     price: 1.99,
     badge: "ACCESORIO",
-    image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?auto=format&fit=crop&w=800&q=80"
+    image: "funda-silicona.png.png"
   }
 ];
 
@@ -78,7 +78,7 @@ function renderProducts() {
         <div class="product-top">
           <h3>${product.name}</h3>
         </div>
-        <div class="product-category">Audio Premium</div>
+        <div class="product-category">${product.category === "audio" ? "Audio Premium" : "Accesorios"}</div>
         <div class="product-bottom">
           <span class="price">${formatPrice(product.price)}</span>
           <button class="mini-btn" type="button" data-product-id="${product.id}">Agregar</button>
